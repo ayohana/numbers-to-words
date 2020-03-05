@@ -7,17 +7,17 @@ namespace NumbersToWords.Tests
   public class ConverterTests
   {
     [TestMethod]
-    public void MethodName1_DescriptionOfBehavior1_ExpectedResult1()
+    public void ConverterConstructor_CreateConverter_Converter()
     {
-      Converter converter = new Converter("hi", 12, "hello");
-      Assert.AreEqual("hi", converter.Property1);
+      Converter converter = new Converter("5");
+      Assert.AreEqual(typeof(Converter), converter.GetType());
     }
 
     [TestMethod]
-    public void MethodName2_DescriptionOfBehavior2_ExpectedResult2()
+    public void ConverterConstructor_StoresUserInput_UserInput()
     {
-      Converter converter = new Converter("hi", 12, "hello");
-      Assert.AreEqual(true, converter.MethodName());
+      Converter converter = new Converter("5");
+      Assert.AreEqual("5", converter.Numeric);
     }
   }
 }
