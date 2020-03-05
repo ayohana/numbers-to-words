@@ -1,20 +1,30 @@
 # Numbers To Words
 
-#### C# console app that converts numeric numbers to written words, Current Version: 03.05.2020
+#### C# Basics Exercise for Epicodus, Current Version: 03.05.2020
 
 #### By Sarah "Sasa" Schwartz and Adela Darmansyah
 
+## Pair Program WFH Summary
+
+* Numbers To Words Project
+* Whiteboarding practice + Further Exploration questions
+* Find and Replace Project
+
 ## Description
 
-FULL DESCRIPTION HERE
+This C# console application converts numeric numbers to written words. For instance, when a user inputs "385", the program will return "three hundred eighty five" in the console.
 
 ## Setup/Installation Requirements
 
-- Clone the repository to your desktop
-- Open the terminal
-- Make sure you are inside the NumbersToWords directory, within the NumbersToWords.Solution directory
-- \$dotnet run
-- Use the app in the terminal!
+* Download [.NET Core](https://dotnet.microsoft.com/download/dotnet-core/)
+* Clone this [repository](https://github.com/ayohana/anagram.git/)
+* Open the `Command Line Interface`.
+  * Navigate into the `NumbersToWords` directory.
+    * Type in the command `dotnet restore` to gather tools and dependencies for the application.
+    * Type in the command `dotnet run` to run the application.
+  * Navigate into the `NumbersToWords.Tests` directory.
+    * Type in the command `dotnet restore` to gather tools and dependencies for the tests.
+    * Type in the command `dotnet test` to run the tests. 
 
 ## Specs
 
