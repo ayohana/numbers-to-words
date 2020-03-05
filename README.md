@@ -2,7 +2,7 @@
 
 #### C# console app that converts numeric numbers to written words, Current Version: 03.05.2020
 
-#### By Sarah "Sasa" Schwartz
+#### By Sarah "Sasa" Schwartz and Adela Darmansyah
 
 ## Description
 
@@ -18,12 +18,21 @@ FULL DESCRIPTION HERE
 
 ## Specs
 
-- User will do a thing and get a result.
-  - Sample input:
-  - Expected output:
-- User will do a thing and get a result.
-  - Sample input:
-  - Expected output:
+- The application gather user input
+  - Sample input: 385
+  - Expected output: 385
+- The application will convert 1-digit number into words
+  - Sample input: 5
+  - Expected output: Five
+- The application will convert 2-digits number into words
+  - Sample input: 85
+  - Expected output: Eighty five
+- The application will convert 3-digits number into words
+  - Sample input: 385
+  - Expected output: Three hundred eighty five
+- The application will alert user if input is invalid
+  - Sample input: User inputs 3applepearhello
+  - Expected output: Invalid input. Please enter a number.
 
 ## Known Bugs
 
