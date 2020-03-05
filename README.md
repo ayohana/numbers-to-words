@@ -30,6 +30,12 @@ FULL DESCRIPTION HERE
 - The application will convert 3-digits number into words
   - Sample input: 385
   - Expected output: Three hundred eighty five
+- The application will take multiple zeros into account
+  - Sample input: 330
+  - Expected output: three hundred thirty
+- The application will take single zero into account
+  - Sample input: 0
+  - Expected output: zero
 - The application will alert user if input is invalid
   - Sample input: User inputs 3applepearhello
   - Expected output: Invalid input. Please enter a number.

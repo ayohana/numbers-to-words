@@ -7,8 +7,11 @@ namespace NumbersToWords.Models
   {
     public static void Main()
     {
-      Converter converter = new Converter("311");
+      Console.WriteLine("Enter a number between 0-999:");
+      string input = Console.ReadLine();
+      Converter converter = new Converter(input);
       string output = converter.ConvertToWords();
+      Console.WriteLine(output);
     }
   }
 }

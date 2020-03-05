@@ -49,6 +49,24 @@ namespace NumbersToWords.Tests
     }
 
     [TestMethod]
+    public void ConvertToWords_AccountForZeros_String()
+    {
+      Converter converter = new Converter("330");
+      string expected = "three hundred thirty";
+      string output = converter.ConvertToWords();
+      Assert.AreEqual(expected, output);
+    }
+
+    [TestMethod]
+    public void ConvertToWords_AccountForSingleZero_String()
+    {
+      Converter converter = new Converter("0");
+      string expected = "zero";
+      string output = converter.ConvertToWords();
+      Assert.AreEqual(expected, output);
+    }
+
+    [TestMethod]
     public void ConvertToWords_InvalidInput_String()
     {
       Converter converter = new Converter("1invalid");
