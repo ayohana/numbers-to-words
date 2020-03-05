@@ -26,8 +26,17 @@ namespace NumbersToWords.Models
 
     public string ConvertToWords()
     {
+      string[] numArray = Numeric.Split("");
+      int num;
+      if (!int.TryParse(Numeric, out num))
+      {
+        return "Invalid Input";
+      }
+      for (int i = numArray.Length - 1; i >= 0; i--)
+      {
 
-      return "hi";
+      }
+      return "hi ";
     }
   }
 }
