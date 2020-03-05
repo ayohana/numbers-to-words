@@ -29,5 +29,32 @@ namespace NumbersToWords.Tests
       string output = converter.ConvertToWords();
       Assert.AreEqual(expected, output);
     }
+
+    [TestMethod]
+    public void ConvertToWords_ConvertDoubleDigits_String()
+    {
+      Converter converter = new Converter("85");
+      string expected = "eighty five";
+      string output = converter.ConvertToWords();
+      Assert.AreEqual(expected, output);
+    }
+
+    [TestMethod]
+    public void ConvertToWords_ConvertTripleDigits_String()
+    {
+      Converter converter = new Converter("385");
+      string expected = "three hundred eighty five";
+      string output = converter.ConvertToWords();
+      Assert.AreEqual(expected, output);
+    }
+
+    [TestMethod]
+    public void ConvertToWords_InvalidInput_String()
+    {
+      Converter converter = new Converter("1invalid");
+      string expected = "Invalid Input";
+      string output = converter.ConvertToWords();
+      Assert.AreEqual(expected, output);
+    }
   }
 }
