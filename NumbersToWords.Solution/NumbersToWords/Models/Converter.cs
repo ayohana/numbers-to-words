@@ -60,6 +60,11 @@ namespace NumbersToWords.Models
               output.Insert(0, _tens[numArray[i]]);
             }
           }
+          if (i == numArray.Length - 3)
+          {
+            output.Insert(0, "hundred");
+            output.Insert(0, _ones[numArray[i]]);
+          }
         }
       }
 
@@ -69,14 +74,3 @@ namespace NumbersToWords.Models
 
   }
 }
-
-// If the length of number > 1 (else)
-// For each digit (backwards starting from the second to last?)
-
-// If i ==  third to last
-// Add "hundred"
-// If the second to last digit is 1
-// Take i+(i+1) and check it vs the dictionary
-// If second to last digit isn't 1
-// Take i+1 and check against ones
-// Take i and check against tens
