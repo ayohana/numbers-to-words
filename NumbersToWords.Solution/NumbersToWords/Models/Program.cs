@@ -7,7 +7,8 @@ namespace NumbersToWords.Models
   {
     public static void Main()
     {
-      // project code goes here
+      Converter converter = new Converter("311");
+      string output = converter.ConvertToWords();
     }
   }
 }

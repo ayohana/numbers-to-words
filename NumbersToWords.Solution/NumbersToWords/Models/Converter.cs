@@ -26,22 +26,61 @@ namespace NumbersToWords.Models
 
     public string ConvertToWords()
     {
-      string[] numArray = Numeric.Split("");
+      string[] numArray = new string[Numeric.Length];
+      for (int i = 0; i < Numeric.Length; i++)
+      {
+        numArray[i] = Numeric[i].ToString();
+      }
+
       int num;
       List<string> output = new List<string>();
       if (!int.TryParse(Numeric, out num))
       {
         return "Invalid Input";
       }
-      for (int i = numArray.Length - 1; i >= 0; i--)
+
+      if (numArray.Length == 1)
       {
-        if (i == (numArray.Length - 1))
+        output.Insert(0, _ones[numArray[0]]);
+        Console.WriteLine("length of string is 1");
+      }
+      else if (numArray.Length > 1)
+      {
+        for (int i = numArray.Length - 2; i >= 0; i--)
         {
-          output.Insert(0, _ones[numArray[i]]);
+          if (i == (numArray.Length - 2))
+          {
+            if (numArray[i] == "1")
+            {
+              string joinedTeens = numArray[i] + numArray[i + 1];
+              Console.WriteLine("joinedTeens" + joinedTeens);
+              output.Insert(0, _teens[joinedTeens]);
+            }
+            else
+            {
+              Console.WriteLine("single digit " + numArray[i + 1]);
+              Console.WriteLine("tens digit " + numArray[i]);
+              output.Insert(0, _ones[numArray[i + 1]]);
+              output.Insert(0, _tens[numArray[i]]);
+            }
+          }
         }
       }
+
       string outputString = String.Join(" ", output.ToArray());
       return outputString;
     }
+
   }
 }
+
+// If the length of number > 1 (else)
+// For each digit (backwards starting from the second to last?)
+
+// If i ==  third to last
+// Add "hundred"
+// If the second to last digit is 1
+// Take i+(i+1) and check it vs the dictionary
+// If second to last digit isn't 1
+// Take i+1 and check against ones
+// Take i and check against tens
