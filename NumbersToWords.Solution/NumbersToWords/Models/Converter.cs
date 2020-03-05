@@ -42,7 +42,6 @@ namespace NumbersToWords.Models
       if (numArray.Length == 1)
       {
         output.Insert(0, _ones[numArray[0]]);
-        Console.WriteLine("length of string is 1");
       }
       else if (numArray.Length > 1)
       {
@@ -53,13 +52,10 @@ namespace NumbersToWords.Models
             if (numArray[i] == "1")
             {
               string joinedTeens = numArray[i] + numArray[i + 1];
-              Console.WriteLine("joinedTeens" + joinedTeens);
               output.Insert(0, _teens[joinedTeens]);
             }
             else
             {
-              Console.WriteLine("single digit " + numArray[i + 1]);
-              Console.WriteLine("tens digit " + numArray[i]);
               output.Insert(0, _ones[numArray[i + 1]]);
               output.Insert(0, _tens[numArray[i]]);
             }
