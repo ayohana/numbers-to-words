@@ -17,7 +17,17 @@ namespace NumbersToWords.Tests
     public void ConverterConstructor_StoresUserInput_UserInput()
     {
       Converter converter = new Converter("5");
-      Assert.AreEqual("5", converter.Numeric);
+      string expected = "5";
+      Assert.AreEqual(expected, converter.Numeric);
+    }
+
+    [TestMethod]
+    public void ConvertToWords_ConvertSingleDigit_String()
+    {
+      Converter converter = new Converter("5");
+      string expected = "five";
+      string output = converter.ConvertToWords();
+      Assert.AreEqual(expected, output);
     }
   }
 }
