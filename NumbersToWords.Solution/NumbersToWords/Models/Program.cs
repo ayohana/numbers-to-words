@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ProjectName
+namespace NumbersToWords.Models
 {
   public class Program
   {

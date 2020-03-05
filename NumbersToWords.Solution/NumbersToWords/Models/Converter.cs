@@ -1,9 +1,8 @@
 using System;
 
-
-namespace ProjectName
+namespace NumbersToWords.Models
 {
-  public class ClassName
+  public class Converter
   {
     public string Property1 { get; set; }
     public int Property2 { get; set; }
@@ -20,16 +19,16 @@ namespace ProjectName
       }
     }
 
-    public ClassName(string property1, int property2, string property3)
+    public Converter(string property1, int property2, string property3)
     {
       Property1 = property1;
       Property2 = property2;
       Property3 = property3;
     }
 
-    public bool MethodName () {
+    public bool MethodName()
+    {
       return true;
     }
-  }  
+  }
 }
-
